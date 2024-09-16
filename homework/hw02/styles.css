@@ -1,0 +1,41 @@
+header,
+main,
+section,
+
+.news-feed {
+    margin: 10px;
+}
+
+article {
+    min-height: 300px;
+}
+
+#top-header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    right: 50px;
+    background-color: white;
+    position: fixed;
+    top: 35vw;
+}
+
+main {
+    margin-top: 100px;
+    width: 58vw;
+    margin-left: 5vw;
+}
+
+@media(max-width: 800px) {
+    aside {
+        display: none;
+    }
+}
