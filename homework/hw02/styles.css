@@ -1,42 +1,47 @@
-body * {
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/*Site Wide Styles*/
+
+* {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background: #F4F4F4;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
 }
 
-header,
-main,
-section,
-article,
-nav,
-
-nav {
-    align-content: center;
-}
-
-.logo {
-    font-size: 1em;
-    font-weight: bold;
-    padding-left: 1%;
-}
-
-aside,
-body>header,
-main,
-
-.news-feed {
-    border: solid 4px #000;
+aside, main, nav {
     padding: 10px;
-    margin: 10px;
 }
 
-article {
-    min-height: 300px;
+header {
+    margin-top: 20px;
 }
+
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa';
+}
+
+a, a:visited, a:hover, a:link, a:active {
+    text-decoration: none;
+    color: rgb(44, 105, 155);
+}
+
+a:hover {
+    color: #777;
+}
+
+.button {
+    background-color: transparent;
+    border: 0;
+    padding: 8px 0px;
+    text-align: center;
+    color: rgb(44, 105, 155);
+}
+
+/*top Layout*/
 
 #top-header {
     background-color: white;
@@ -50,29 +55,254 @@ article {
 }
 
 aside {
-    margin: 0;
-    top: 120px;
-    right: 5vw;
-    background-color: white;
     position: fixed;
-    width: 30vw;
+    left: calc(60vw);
+    top: 70px;
+    background-color: #f2f2f2;
+    height: calc(100vh - 100px);
+    padding-left: 40px;
+    max-width: 500px;
+    min-width: 350px
 }
 
 main {
-    margin-top: 120px;
-    width: 55vw;
-    margin-left: 5vw;
+    margin-top: 70px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-@media (max-width: 800px) {
+.logo {
+    font-weight: bold;
+    padding-left: 1%;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav span {
+    margin-left: 10px;
+}
+
+/*Stories*/
+
+.stories {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 50vw;
+    min-width: 540px;
+    border: solid 1px #dbdbdb;
+    margin-bottom: 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.stories > div {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stories > div .pic {
+    min-width: 50px;
+    min-height: 50px;
+    border: solid 3px #dbdbdb;
+    border-radius: 27px;
+}
+
+.stories p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 0.80em;
+    color: #999;
+}
+
+/*Posts*/
+
+.posts {
+    border: solid 1px #dbdbdb;
+    margin-bottom: 30px;
+    background-color: #fff;
+    width: 50vw;
+    min-width: 540px;
+}
+
+.posts img {
+    width: 100%;
+    height: auto;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.posts .header, .posts .buttons, .posts .add-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.posts .header, .posts .info {
+    padding: 2px 10px;
+    color: #444;
+}
+
+.posts .buttons {
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+.posts .buttons i {
+    margin-right: 4px;
+}
+
+.posts .caption, .posts .comments, .likes {
+    padding: 0px 5px;
+}
+
+.posts .caption p, .posts .comments p {
+    margin: 8px 0px 3px 0px;
+    font-size: 0.9em;
+}
+
+.posts .button {
+    padding: 5px 8px;
+    font-size: 1.0em;
+}
+
+.posts .comments .timestamp {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding: 10px 0;
+}
+
+.posts .add-comment {
+    border-top: solid 1px #dbdbdb;
+    padding: 10px 15px;
+}
+
+.posts .add-comment .input-holder {
+    width: 90%;
+}
+
+.posts .add-comment input, .posts .add-comment input:focus, .posts .add-comment input:focus-visible {
+    border-width: 0px;
+    outline: none;
+    font-size: 0.95em;
+    width: 85%;
+    padding: 10px 0px;
+}
+
+.posts .add-comment i {
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.posts .add-comment .button {
+    padding: 8px 20px;
+    font-size: 1.0em;
+}
+
+/*Suggestions*/
+
+.suggested-text {
+    color: #999;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.suggested section {
+    display: grid;
+    grid-template-columns: 43px auto 80px;
+    align-items: center;
+}
+
+.suggested section > div {
+    padding: 8px;
+}
+
+.suggested .username {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.suggested section p, .suggested section a {
+    margin: 0px;
+}
+
+.suggested section p {
+    color: #333;
+    font-weight: 600;
+}
+
+.suggested section a {
+    font-size: 0.8em;
+}
+
+.suggested section p:nth-child(2) {
+    color: #999;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.suggested section .pic {
+    min-width: 30px;
+    min-height: 30px;
+    border: solid 1px #dbdbdb;
+    border-radius: 15px;
+}
+
+aside header {
+    display: flex;
+    align-items: center;
+}
+
+aside header .pic {
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 33px;
+    border-width: 0px;
+    margin-right: 20px;
+}
+
+@media (max-width: 900px) {
     aside {
         display: none;
     }
     main {
-        margin-top: 100px;
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 20px;
+        padding: 0px;
+        align-items: center;
+    }
+    .posts, .stories {
+        width: 90vw;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .posts, .stories {
+        width: 95vw;
     }
 }
