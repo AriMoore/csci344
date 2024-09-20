@@ -1,56 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sample Layout</title>
-</head>
-
-<body>
-    <!-- Fixed -->
-    <header id="top-header">
-        <h1 class="logo">
-            Photo App
-        </h1>
+    <head>
+        <title>Photo App</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    </head>
+    <body>
         <nav>
-            Username | Sign out
+            <header id="top-header">
+                <h1 class="logo">Photo App</h1>
+                <nav>
+                    <span><a href="#">Profile</a></span>
+                    <span><a href="#">Sign out</a></span>
+                </nav>
+            </header>
         </nav>
-    </header>
-    <!-- Fixed -->
-    <aside>
-        (aside tag) - Fixed to right
-        <section>Suggestions for you
-            <p>Fake content</p>
-            <p>Fake content</p>
-            <p>Fake content</p>
-            <p>Fake content</p>
-            <p>Fake content</p>
-            <p>Fake content</p>
-        </section>
-    </aside>
-    <!-- Normal -->
-    <main>
-        (main tag) - Flows
-        <section> (section tag) - Stories Panel </section>
-        <section>
-            (section tag) - Posts
-            <article>
-                (article tag) - Post 1
-            </article>
-            <article>
-                (article tag) - Post 2
-            </article>
-            <article>
-                (article tag) - Post 3
-            </article>
-            <article>
-                (article tag) - Post 4
-            </article>
-        </section>
-    </main>
-</body>
-
+        <aside>
+            <header>
+                <img src="https://picsum.photos/60/60?q=11" class="pic"/>
+                <h2>Ari Moore</h2>
+            </header>
+            <div class="suggested">
+                <p class="suggested-text">Suggestions for you</p>
+                <section>
+                    <img src="https://picsum.photos/30/30?q=11" class="pic" />
+                    <div>
+                        <p class="username">John</p>
+                        <p>suggested for you</p>
+                    </div>
+                    <button class="button">follow</button>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/30/30?q=12" class="pic" />
+                    <div>
+                        <p class="username">Greg</p>
+                        <p>suggested for you</p>
+                    </div>
+                    <button class="button">follow</button>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/30/30?q=13" class="pic" />
+                    <div>
+                        <p class="username">Jessica</p>
+                        <p>suggested for you</p>
+                    </div>
+                    <button class="button">follow</button>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/30/30?q=14" class="pic" />
+                    <div>
+                        <p class="username">Adam</p>
+                        <p>suggested for you</p>
+                    </div>
+                    <button class="button">follow</button>
+                </section>
+                <section>
+                    <img src="https://picsum.photos/30/30?q=15" class="pic" />
+                    <div>
+                        <p class="username">Robert</p>
+                        <p>suggested for you</p>
+                    </div>
+                    <button class="button">follow</button>
+                </section>
+    
+            </div>
+        </aside>
+        <main class="content">
+            <!-- Stories -->
+            <header class="stories">
+                <div>
+                    <img src="https://picsum.photos/50/50?q=10" class="pic" />
+                    <p>Jenny</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/50/50?q=11" class="pic" />
+                    <p>Mariah</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/50/50?q=12" class="pic" />
+                    <p>Penny</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/50/50?q=13" class="pic" />
+                    <p>Gibson</p>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/50/50?q=14" class="pic" />
+                    <p>Jackson</p>
+                </div>
+            </header>
+            <!-- Posts -->
+            <section class="posts">
+                <div class="header">
+                    <h3>Posts for You</h3>
+                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300">
+                <div class="info">
+                    <div class="buttons">
+                        <div>
+                            <button class="icon-button"><i class="far fa-heart"></i></button>
+                            <button class="icon-button"><i class="far fa-comment"></i></button>
+                            <button class="icon-button"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div>
+                            <button class="icon-button"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <p class="likes"><strong>85 likes</strong></p>
+                    <div class="comments">
+                        <p><strong>lizzie</strong> Here is a comment text text text text text text text text.</p>
+                        <p><strong>vanek97</strong> Here is another comment text text text.</p>
+                        <p class="timestamp">1 day ago</p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <div class="input-holder">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <button class="button">Post</button>
+                </div>
+            </section>
+            <section class="posts">
+                <div class="header">
+                    <h3>Posts for You</h3>
+                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300">
+                <div class="info">
+                    <div class="buttons">
+                        <div>
+                            <button class="icon-button"><i class="far fa-heart"></i></button>
+                            <button class="icon-button"><i class="far fa-comment"></i></button>
+                            <button class="icon-button"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div>
+                            <button class="icon-button"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <p class="likes"><strong>50 likes</strong></p>
+                    <div class="comments">
+                        <p><strong>lizzie</strong> Here is a comment text text text text text text text text.</p>
+                        <p><strong>vanek97</strong> Here is another comment text text text.</p>
+                        <p class="timestamp">1 day ago</p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <div class="input-holder">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <button class="button">Post</button>
+                </div>
+            </section>
+            <section class="posts">
+                <div class="header">
+                    <h3>Posts for You</h3>
+                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300">
+                <div class="info">
+                    <div class="buttons">
+                        <div>
+                            <button class="icon-button"><i class="far fa-heart"></i></button>
+                            <button class="icon-button"><i class="far fa-comment"></i></button>
+                            <button class="icon-button"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div>
+                            <button class="icon-button"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <p class="likes"><strong>30 likes</strong></p>
+                    <div class="comments">
+                        <p><strong>lizzie</strong> Here is a comment text text text text text text text text.</p>
+                        <p><strong>vanek97</strong> Here is another comment text text text.</p>
+                        <p class="timestamp">1 day ago</p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <div class="input-holder">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <button class="button">Post</button>
+                </div>
+            </section>
+            <section class="posts">
+                <div class="header">
+                    <h3>Posts for You</h3>
+                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300">
+                <div class="info">
+                    <div class="buttons">
+                        <div>
+                            <button class="icon-button"><i class="far fa-heart"></i></button>
+                            <button class="icon-button"><i class="far fa-comment"></i></button>
+                            <button class="icon-button"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div>
+                            <button class="icon-button"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <p class="likes"><strong>756 likes</strong></p>
+                    <div class="comments">
+                        <p><strong>lizzie</strong> Here is a comment text text text text text text text text.</p>
+                        <p><strong>vanek97</strong> Here is another comment text text text.</p>
+                        <p class="timestamp">1 day ago</p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <div class="input-holder">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <button class="button">Post</button>
+                </div>
+            </section>
+            <section class="posts">
+                <div class="header">
+                    <h3>Posts for You</h3>
+                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300">
+                <div class="info">
+                    <div class="buttons">
+                        <div>
+                            <button class="icon-button"><i class="far fa-heart"></i></button>
+                            <button class="icon-button"><i class="far fa-comment"></i></button>
+                            <button class="icon-button"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div>
+                            <button class="icon-button"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <p class="likes"><strong>330 likes</strong></p>
+                    <div class="comments">
+                        <p><strong>lizzie</strong> Here is a comment text text text text text text text text.</p>
+                        <p><strong>vanek97</strong> Here is another comment text text text.</p>
+                        <p class="timestamp">1 day ago</p>
+                    </div>
+                </div>
+                <div class="add-comment">
+                    <div class="input-holder">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Add a comment...">
+                    </div>
+                    <button class="button">Post</button>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
